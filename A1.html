@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Abdulazeez Alameen's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #7e57c2, #512da8);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .contact-info {
+            font-size: 24px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .feature {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #673ab7;
+            margin: 10px;
+            min-width: 250px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .feature h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 18px;
+        }
+        .whatsapp-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-link:hover {
+            background-color: #1ebc59;
+        }
+        .coffee-section {
+            margin-top: 50px;
+            position: relative;
+        }
+        .coffee-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background-color: #FF813F;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        .coffee-button:hover {
+            background-color: #e57300;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        .modal-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .modal {
+            background-color: #512da8;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 80%;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        .modal h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .modal p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .modal-button {
+            background-color: #FF813F;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .modal-button:hover {
+            background-color: #e57300;
+        }
+        .testimonial-section {
+            margin-top: 50px;
+        }
+        .testimonial {
+            background-color: #7e57c2;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .testimonial p:last-child {
+            font-weight: bold;
+        }
+        .faq-section {
+            margin-top: 50px;
+        }
+        .faq {
+            background-color: #7e57c2;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .faq h3 {
+            margin-bottom: 10px
+            ;
+        }
+        footer {
+            background-color: #512da8;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .social-media {
+            display: flex;
+            align-items: center;
+        }
+        .social-link {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #1ebc59;
+        }
+        .cover {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-button {
+            background-color: white;
+            color: navy;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size:
+            16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .social-button:hover {
+            background-color: #f0f0f0;
+        }
+        @keyframes glowing {
+            0% {
+                border-color: transparent;
+                box-shadow: 0 0 10px 0px #FF813F;
+            }
+            25% {
+                border-color: #FF813F;
+                box-shadow: 0 0 20px 10px #FF813F;
+            }
+            50% {
+                border-color: #FF5733;
+                box-shadow: 0 0 30px 20px #FF5733;
+            }
+            75% {
+                border-color: #FFC300;
+                box-shadow: 0 0 20px 10px #FFC300;
+            }
+            100% {
+                border-color: #FF813F;
+                box-shadow: 0 0 10px 0px #FF813F;
+            }
+        }
+
+        .glowing-line {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 3px solid transparent;
+            border-top-color: #FF813F;
+            animation: glowing 3s infinite;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        // JavaScript functions
+        function showModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function hideModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Abdulazeez Alameen's Website</h1>
+        <p>Hi there! I'm Abdulazeez Alameen. Explore below to learn more about my Python programming course.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h2>About Me</h2>
+                <p>I'm passionate about technology and love to teach Python programming.</p>
+            </div>
+            <div class="feature">
+                <h2>My Course</h2>
+                <p>Join my Python programming course for just $25 and enhance your skills.</p>
+            </div>
+            <div class="feature">
+                <h2>Contact</h2>
+                <p>Feel free to reach out to me if you have any questions or inquiries.</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <p>Contact Info:</p>
+            <p>Phone: <a href="tel:08117896398">081-1789-6398</a></p>
+            <a class="whatsapp-link" href="https://wa.me/message/GCOKJVN6WERKJ1" target="_blank">Chat with me on WhatsApp</a>
+        </div>
+
+        <div class="coffee-section">
+            <h2>Support My Work</h2>
+            <p>If you like my work, consider buying me a coffee.</p>
+            <div class="glowing-line"></div>
+            <a class="coffee-button" href="#" onclick="showModal()">Buy Me a Coffee</a>
+        </div>
+
+        <div class="modal-background" id="modal" onclick="hideModal()">
+            <div class="modal">
+                <h2>Bank Details</h2>
+                <p><strong>Bank Name:</strong> OK</p>
+                <p><strong>Account Name:</strong> Abdulazeez Alameen</p>
+            </div>
+        </div>
+
+        <div class="testimonial-section">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Abdulazeez's course helped me improve my Python skills significantly. Highly recommended!"</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"I'm grateful for Abdulazeez's teaching style. It made learning Python enjoyable and easy."</p>
+                <p>- Jane Smith</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h3>How can I enroll in your Python course?</h3>
+                <p>Enrollment is simple! Just visit our course page and follow the instructions to sign up.</p>
+            </div>
+            <div class="faq">
+                <h3>Do you offer refunds?</h3>
+                <p>We offer a 30-day money-back guarantee. If you're not satisfied with the course, we'll refund your purchase, no questions asked.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cover">
+        <h1>Show Some Love to Your Tech Bro</h1>
+        <div class="button-container">
+            <a href="https://youtube.com/@webaiguru?si=Zg31eOF7wZ5L5vVX" class="social-button">YouTube</a>
+            <a href="https://instagram.com/web_ai_guru?igsh=cHYzN3E2bWQ4dzJv" class="social-button">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61559003862860&mibextid=ZbWKwL" class="social-button">Facebook</a>
+        </div>
+        <p>Click the buttons above to visit my profiles!</p>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Abdulazeez Alameen. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Abdulazeez Alameen's Website</title>
+    <style>
+        /* CSS styles */
+    </style>
+    <script>
+        // JavaScript functions
+        function showModal() {
+            // Get the modal element
+            var modal = document.getElementById('modal');
+
+            // Get the modal content element
+            var modalContent = modal.querySelector('.modal');
+
+            // Update the modal content with the new account details
+            modalContent.innerHTML = `
+                <h2>Account Details</h2>
+                <p><strong>Bank Name:</strong> Access Bank</p>
+                <p><strong>Account Number:</strong> 0050894463</p>
+                <p><strong>Account Name:</strong> Abdulazeez Olashile Al-Ameen</p>
+                <button class="modal-button" onclick="hideModal()">Close</button>
+            `;
+
+            // Display the modal
+            modal.style.display = 'flex';
+        }
+
+        function hideModal() {
+            // Hide the modal
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- HTML content -->
+    </div>
+
+    <!-- Modal background -->
+    <div class="modal-background" id="modal" onclick="hideModal()">
+        <!-- Modal content -->
+        <div class="modal"></div>
+    </div>
+
+    <!-- Rest of the HTML content -->
+</body>
+</html>
